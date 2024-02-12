@@ -1,0 +1,22 @@
+name: Automatic Pull Request
+
+on:
+  push:
+    branches:
+      - Execution
+
+jobs:
+  create_pull_request:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
+      with:
+        title: Automatic Pull Request
+        branch: main
+        body: |
+          This pull request was automatically generated when pushing to Test_Branch.
