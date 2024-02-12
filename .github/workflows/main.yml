@@ -17,6 +17,6 @@ jobs:
       uses: peter-evans/create-pull-request@v3
       with:
         title: Automatic Pull Request
-        branch: main
+        branch: master
         body: |
           This pull request was automatically generated when pushing to Test_Branch.
